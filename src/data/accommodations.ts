@@ -1,0 +1,12 @@
+import type { Accommodation } from "@/types/accommodation";
+
+// SAMPLE categories only. Replace with the hotel's confirmed inventory (later: from the API).
+export const accommodations: Accommodation[] = [
+  { slug: "standard-room", name: "Standard Room", type: "Hotel room", description: "A comfortable room for solo travellers and couples.", maxGuests: 2, sizeSqm: null, bathroom: null, beds: null, pricePerNight: 50000, amenities: [], photos: ["rooms/standard-room-01.jpg", "rooms/standard-room-02.jpg", "rooms/standard-room-03.jpg", "rooms/standard-room-04.jpg"] },
+  { slug: "deluxe-room", name: "Deluxe Room", type: "Hotel room", description: "More space and a more considered finish.", maxGuests: 2, sizeSqm: null, bathroom: null, beds: null, pricePerNight: 30000, amenities: [], photos: ["rooms/deluxe-room-01.jpg", "rooms/deluxe-room-02.jpg", "rooms/deluxe-room-03.jpg", "rooms/deluxe-room-04.jpg"] },
+  { slug: "executive-room", name: "Executive Room", type: "Hotel room", description: "Our most spacious hotel room category.", maxGuests: 3, sizeSqm: null, bathroom: null, beds: null, pricePerNight: 5000, amenities: [], photos: ["rooms/executive-room-01.jpg", "rooms/executive-room-02.jpg", "rooms/executive-room-03.jpg", "rooms/executive-room-04.jpg"] },
+  { slug: "one-bedroom-apartment", name: "One-Bedroom Apartment", type: "Serviced apartment", description: "A separate bedroom and living area for longer stays.", maxGuests: 3, sizeSqm: null, bathroom: null, beds: null, pricePerNight: 30000, amenities: [], photos: ["apartments/one-bedroom-apartment.jpg", "apartments/one-bedroom-apartment-02.jpg", "apartments/one-bedroom-apartment-03.jpg", "apartments/one-bedroom-apartment-04.jpg"] },
+  { slug: "two-bedroom-apartment", name: "Two-Bedroom Apartment", type: "Serviced apartment", description: "Room for families and groups travelling together.", maxGuests: 5, sizeSqm: null, bathroom: null, beds: null, pricePerNight: 40000, amenities: [], photos: ["apartments/two-bedroom-apartment.jpg", "apartments/two-bedroom-apartment-02.jpg", "apartments/two-bedroom-apartment-03.jpg", "apartments/two-bedroom-apartment-04.jpg"] },
+];
+
+export const getAccommodation = (slug: string) => accommodations.find((a) => a.slug === slug);
